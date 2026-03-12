@@ -754,6 +754,9 @@ body{
   background:#eef2ff;
   color:#2563eb;
 }
+.menu-button{
+  display:none;
+}
 
 @media (max-width:768px){
 
