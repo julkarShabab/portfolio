@@ -53,15 +53,17 @@ export function Header() {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="mobile-menu">
+
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className="mobile-nav-button"
+                className="mobile-nav-link"
               >
                 {item.label}
               </button>
             ))}
+
           </div>
         )}
       </nav>
