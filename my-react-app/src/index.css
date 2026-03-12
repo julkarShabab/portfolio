@@ -415,7 +415,6 @@ button:hover{
 
 .skills-section {
   padding: 60px 20px;
-  background: #eef1f8;
 }
 
 .skills-container {
@@ -426,48 +425,53 @@ button:hover{
 .skills-title {
   font-size: 28px;
   font-weight: 700;
-  color: #1a56a0;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
-/* Card grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+.skills-row {
+  margin-bottom: 40px;
 }
 
-.skills-card {
-  background: #bbd1d467;
-  border-radius: 16px;
-  padding: 24px;
-}
-
-.skills-card-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: #1a56a0;
+.skills-row-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 16px;
 }
 
-/* Pills row */
+.skills-row-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.skills-row-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(100, 116, 139, 0.25);
+}
+
+.skills-row-count {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
 .skills-items {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-/* Skill pill — dark style */
 .skill-pill {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
   border-radius: 999px;
-  /* background:#f1f5f9;
-  color:#0f172a; */
-  background:#0f172a ;
-  color: white;
+  background: #f1f5f9;
+  color: #0f172a;
   font-size: 14px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   transition: 0.25s;
@@ -475,8 +479,7 @@ button:hover{
 
 .skill-pill:hover {
   transform: translateY(-2px);
-  /* background: #e2e8f0; */
-  background: #1e293b;
+  background: #e2e8f0;
 }
 
 .skill-pill svg {

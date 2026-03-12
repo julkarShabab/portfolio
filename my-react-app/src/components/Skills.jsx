@@ -62,25 +62,26 @@ export function Skills() {
   ];
 
   return (
-    <section id="skills" className="skills-section">
-      <div className="skills-container">
-        <h2 className="skills-title">Skills</h2>
-        <div className="skills-grid">
-          {skillCategories.map((category) => (
-            <div key={category.title} className="skills-card">
-              <div className="skills-card-title">{category.title}</div>
-              <div className="skills-items">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="skill-pill">
-                    <span style={{ color: skill.color, display: "flex" }}>{skill.icon}</span>
-                    {skill.name}
-                  </div>
-                ))}
+  <section id="skills" className="skills-section">
+    <div className="skills-container">
+      <h2 className="skills-title">Skills</h2>
+      {skillCategories.map((category) => (
+        <div key={category.title} className="skills-row">
+          <div className="skills-row-header">
+            <span className="skills-row-title">{category.title}</span>
+            {/* <span className="skills-row-count">{category.skills.length}</span> */}
+          </div>
+          <div className="skills-items">
+            {category.skills.map((skill) => (
+              <div key={skill.name} className="skill-pill">
+                <span style={{ color: skill.color, display: "flex" }}>{skill.icon}</span>
+                {skill.name}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      ))}
+    </div>
+  </section>
+);
 }
