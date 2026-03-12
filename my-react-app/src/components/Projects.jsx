@@ -75,14 +75,14 @@ export function Projects() {
                 </a> */}
 
                 {project.liveUrl && (
-                  <a href={project.liveUrl} className="project-link blue">
+                  <a href={project.liveUrl} className="project-link blue" target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={16} />
                     Live Demo
                   </a>
                 )}
 
                 {project.githubUrl && (
-                <a href={project.githubUrl} className="project-link gray">
+                <a href={project.githubUrl} className="project-link gray" target="_blank" rel="noopener noreferrer">
                   <Github size={16} />
                   Code
                 </a>
