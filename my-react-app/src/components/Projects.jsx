@@ -3,29 +3,31 @@ import { ExternalLink, Github } from "lucide-react";
 export function Projects() {
 
   const projects = [
-    {
-      title: "Hospital Management System",
-      description:
-        "Developed full-stack appointment & scheduling modules and optimized dashboards for usability.",
-      tags: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
-      liveUrl: "",
-      githubUrl: "#",
-    },
+    
     {
       title: "Gym Management System",
       description:
         "Built responsive React components for membership management and user interaction.",
       tags: ["React.js", "Node.js", "MongoDB"],
       liveUrl: "",
-      githubUrl: "#",
+      githubUrl: "https://github.com/julkarShabab/relife",
     },
+    
     {
       title: "Cafe Delivery Management System",
       description:
         "Built full-stack system and designed order workflows with CRUD support.",
       tags: ["React.js", "Node.js", "MongoDB"],
       liveUrl: "",
-      githubUrl: "#",
+      githubUrl: "https://github.com/julkarShabab/uiu-canteen",
+    },
+    {
+      title: "Hospital Management System",
+      description:
+        "Developed full-stack appointment & scheduling modules and optimized dashboards for usability.",
+      tags: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
+      liveUrl: "",
+      githubUrl: "",
     },
     {
       title: "Gender Bias Detection in AI Chatbots",
@@ -33,7 +35,7 @@ export function Projects() {
         "Conducted quantitative bias analysis in AI chatbots(Chatgpt,Gemini) using automated bias scorecards.",
       tags: ["Python", "NLP"],
       liveUrl: "",
-      githubUrl: "#",
+      githubUrl: "https://github.com/julkarShabab/sentiment_analysis",
     },
   ];
 
@@ -79,10 +81,13 @@ export function Projects() {
                   </a>
                 )}
 
+                {project.githubUrl && (
                 <a href={project.githubUrl} className="project-link gray">
                   <Github size={16} />
                   Code
                 </a>
+                )}
+                
 
               </div>
 
