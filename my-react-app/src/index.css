@@ -126,6 +126,11 @@ button:hover{
   color:var(--primary);
   text-decoration:none;
 }
+.logo-img{
+  height:40px;
+  width:auto;
+  object-fit:contain;
+}
 
 .nav-links{
   display:flex;
@@ -767,5 +772,13 @@ body{
 .menu-button{
   display:block;
 }
+
+}
+
+@media (max-width:768px){
+
+  .logo-img{
+    height:34px;
+  }
 
 }

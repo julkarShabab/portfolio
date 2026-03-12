@@ -24,7 +24,8 @@ export function Header() {
         <div className="nav-inner">
 
           <a href="#" className="logo">
-            JNS
+            <img src="/DP.png" alt="JNS Logo" className="logo-img"/>
+            
           </a>
 
           {/* Desktop navigation */}
