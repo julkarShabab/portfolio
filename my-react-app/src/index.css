@@ -413,59 +413,75 @@ button:hover{
 }
 /* SKILLS */
 
-.skills-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+.skills-section {
+  padding: 60px 20px;
+  background: #eef1f8;
 }
 
-/* skill category card */
-
-.skill-category{
-  background:white;
-  border-radius:16px;
-  padding:24px;
-  border:1px solid var(--border);
-  box-shadow:0 8px 30px rgba(0,0,0,0.05);
-
-  transition:.25s;
+.skills-container {
+  max-width: 1100px;
+  margin: auto;
 }
 
-.skill-category:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,0.12);
+.skills-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a56a0;
+  margin-bottom: 32px;
 }
 
-/* category title */
-
-.skill-category-title{
-  color:var(--primary);
-  font-weight:600;
-  margin-bottom:14px;
+/* Card grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
-/* skill container */
-
-.skill-list{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+.skills-card {
+  background: #bbd1d467;
+  border-radius: 16px;
+  padding: 24px;
 }
 
-/* skill badges */
-
-.skill-badge{
-  padding:7px 14px;
-  border-radius:999px;
-  font-size:13px;
-  font-weight:500;
-
-  background:linear-gradient(135deg,#eef2ff,#e0e7ff);
-  color:#3730a3;
-
-  transition:all .25s;
+.skills-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a56a0;
+  margin-bottom: 16px;
 }
 
+/* Pills row */
+.skills-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Skill pill — dark style */
+.skill-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  /* background:#f1f5f9;
+  color:#0f172a; */
+  background:#0f172a ;
+  color: white;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+}
+
+.skill-pill:hover {
+  transform: translateY(-2px);
+  /* background: #e2e8f0; */
+  background: #1e293b;
+}
+
+.skill-pill svg {
+  font-size: 16px;
+}
 /* hover effect */
 
 .skill-badge:hover{
