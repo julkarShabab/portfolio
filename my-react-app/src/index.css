@@ -523,23 +523,23 @@ button:hover{
 }
 /* hover effect */
 
-.skill-badge:hover{
+/* .skill-badge:hover{
   background:linear-gradient(135deg,#2563eb,#6366f1);
   color:white;
 
   transform:translateY(-2px);
 
   box-shadow:0 6px 16px rgba(99,102,241,.35);
-}
+} */
 
-.skills-section{
+/* .skills-section{
   padding:120px 20px;
-}
+} */
 
-.skills-title{
+/* .skills-title{
   text-align:center;
   margin-bottom:60px;
-}
+} */
 
 /* PROJECTS */
 
@@ -892,5 +892,50 @@ body{
   height:200px;
   margin-bottom:20px;
 }
+
+}
+
+@media (max-width: 768px) {
+
+  .skills-section {
+    padding: 80px 16px;
+  }
+
+  .skills-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .skills-row {
+    margin-bottom: 30px;
+  }
+
+  .skill-pill {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .skills-title {
+    font-size: 20px;
+  }
+
+  .skills-items {
+    gap: 8px;
+  }
+
+  .skill-pill {
+    font-size: 12px;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .skill-pill svg {
+    font-size: 14px;
+  }
 
 }
