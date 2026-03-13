@@ -1077,3 +1077,230 @@ body {
   .skill-pill svg  { font-size: 14px; }
 
 }
+
+/* THEME */
+
+/* TOGGLE BUTTON */
+/* THEME TOGGLE */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.theme-toggle button {
+  all: unset;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 999px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.theme-toggle button.active {
+  background: white;
+  color: #2563eb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* DARK MODE VARIABLES */
+
+[data-theme="dark"] {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --muted: #1e293b;
+  --muted-text: #94a3b8;
+  --border: #334155;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* BODY & BACKGROUND */
+
+[data-theme="dark"] body {
+  background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 40%, #0f172a 100%) !important;
+  color: #f1f5f9;
+}
+
+/* TYPOGRAPHY */
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .hero-role {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .hero-description {
+  color: #94a3b8;
+}
+
+/* NAVBAR */
+
+[data-theme="dark"] .header {
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom-color: #1e293b;
+}
+
+[data-theme="dark"] .nav-button {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .nav-button:hover {
+  color: #6366f1;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: #1e293b;
+}
+
+[data-theme="dark"] .theme-toggle button {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .theme-toggle button.active {
+  background: #334155;
+  color: #6366f1;
+}
+
+[data-theme="dark"] .mobile-menu {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom-color: #1e293b;
+}
+
+[data-theme="dark"] .mobile-nav-link {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .mobile-nav-link:hover {
+  background: #1e293b;
+  color: #6366f1;
+}
+
+/* HERO */
+
+[data-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%) !important;
+}
+
+/* ABOUT */
+
+[data-theme="dark"] .about-section {
+  background: transparent;
+}
+
+[data-theme="dark"] .about-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .about-card h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .about-card p {
+  color: #94a3b8;
+}
+
+/* CARDS (generic) */
+
+[data-theme="dark"] .card {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: #334155;
+}
+
+/* SKILLS */
+
+[data-theme="dark"] .skills-row-title {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .skills-row-header::after {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+[data-theme="dark"] .skill-pill {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .skill-pill:hover {
+  background: #334155;
+}
+
+/* PROJECTS */
+
+[data-theme="dark"] .project-item {
+  border-color: #1e293b;
+}
+
+[data-theme="dark"] .project-title {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .project-item:hover .project-title {
+  color: #6366f1;
+}
+
+[data-theme="dark"] .project-tag {
+  background: #1e293b;
+  color: #6366f1;
+}
+
+[data-theme="dark"] .project-tag:hover {
+  background: #6366f1;
+  color: white;
+}
+
+[data-theme="dark"] .project-links a {
+  color: #6366f1;
+}
+
+/* RESUME */
+
+[data-theme="dark"] .resume-box {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .resume-left h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .resume-buttons .secondary {
+  background: #334155;
+  color: #6366f1;
+}
+
+/* CONTACT */
+
+[data-theme="dark"] .social-btn {
+  background: #1e293b;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .social-btn.email:hover {
+  background: #2563eb;
+}
+
+[data-theme="dark"] .social-btn.linkedin:hover {
+  background: #7c3aed;
+}
+
+[data-theme="dark"] .social-btn.github:hover {
+  background: #334155;
+}
