@@ -23,7 +23,7 @@ export function Hero() {
       </p>
 
       <button onClick={scrollToProjects} className="hero-button">
-          View My Work
+          My Projects
           <ArrowDown size={20} />
         </button>
     </div>
