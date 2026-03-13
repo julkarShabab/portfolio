@@ -184,14 +184,50 @@ button:hover{
 /* hero container */
 
 .hero-container{
-  max-width:760px;
-  padding:40px;
+  max-width:1100px;
+  margin:auto;
 
-  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+}
 
-  backdrop-filter:blur(8px);
+.hero-left{
+  flex:1;
+}
 
-  animation:heroFloat 6s ease-in-out infinite;
+.hero-right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-photo{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  object-fit:cover;
+
+  /* box-shadow:0 20px 50px rgba(0,0,0,.2); */
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.2),
+  0 0 30px rgba(99,102,241,.35);
+  
+
+  animation:floatPhoto 6s ease-in-out infinite;
+}
+
+@keyframes floatPhoto{
+  0%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-12px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
 }
 
 /* floating effect */
@@ -799,5 +835,19 @@ body{
   .logo-img{
     height:34px;
   }
+
+}
+@media (max-width:768px){
+
+.hero-container{
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero-photo{
+  width:200px;
+  height:200px;
+  margin-bottom:20px;
+}
 
 }
