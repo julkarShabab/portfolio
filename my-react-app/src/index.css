@@ -801,7 +801,7 @@ button:hover{
 }
 /* MOBILE */
 
-body{
+/* body{
   overflow-x:hidden;
 }
 
@@ -937,5 +937,143 @@ body{
   .skill-pill svg {
     font-size: 14px;
   }
+
+} */
+
+body {
+  overflow-x: hidden;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  animation: menuSlide 0.25s ease;
+}
+
+@keyframes menuSlide {
+  from { transform: translateY(-10px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+.mobile-nav-link {
+  padding: 14px 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  text-align: left;
+  color: #334155;
+  transition: 0.2s;
+}
+
+.mobile-nav-link:hover {
+  background: #eef2ff;
+  color: #2563eb;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* TABLET & MOBILE — 768px */
+
+@media (max-width: 768px) {
+
+  /* NAV */
+  .nav-links  { display: none; }
+  .menu-button { display: block; }
+  .logo-img   { height: 34px; }
+
+  /* HERO */
+  .hero-section { padding: 60px 20px; }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-photo {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 0;
+  }
+
+  /* ABOUT */
+  .about-section { padding: 80px 16px; }
+  .about-card    { padding: 28px 20px; }
+
+  /* PROJECTS */
+  .project-title        { font-size: 18px; }
+  .project-item:hover   { padding-left: 0; }
+
+  /* RESUME */
+  .resume-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .resume-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .resume-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* CONTACT */
+  .contact-section { padding: 80px 16px; }
+  .contact-socials  { gap: 20px; }
+  .social-btn       { width: 55px; height: 55px; }
+
+  /* SKILLS */
+  .skills-section  { padding: 80px 16px; }
+  .skills-title    { font-size: 22px; margin-bottom: 30px; text-align: left; }
+  .skills-row      { margin-bottom: 30px; }
+  .skill-pill      { font-size: 13px; padding: 7px 12px; }
+
+}
+
+/* SMALL MOBILE — 480px */
+
+@media (max-width: 480px) {
+
+  /* PROJECTS */
+  .project-title { font-size: 16px; }
+
+  /* RESUME */
+  .resume-buttons        { flex-direction: column; }
+  .resume-buttons button { width: 100%; justify-content: center; }
+
+  /* CONTACT */
+  .contact-socials { gap: 16px; }
+
+  /* SKILLS */
+  .skills-title    { font-size: 20px; }
+  .skills-items    { gap: 8px; }
+
+  .skill-pill {
+    font-size: 12px;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .skill-pill svg  { font-size: 14px; }
 
 }
