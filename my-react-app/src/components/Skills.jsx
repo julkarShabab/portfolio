@@ -16,6 +16,10 @@ import {
 import { FaJava } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
+import { FaPhp } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { SiPostgresql } from "react-icons/si";
 
 export function Skills() {
   const skillCategories = [
@@ -26,7 +30,8 @@ export function Skills() {
         { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
         { name: "C", icon: <FaCode />, color: "#A8B9CC" },
         { name: "C++", icon: <SiCplusplus />, color: "#00599C" },
-        { name: "Java", icon: <FaJava />, color: "#007396" }
+        { name: "Java", icon: <FaJava />, color: "#007396" },
+        { name: "PHP", icon: <FaPhp />, color: "#777BB4" }
       ]
     },
     {
@@ -34,14 +39,22 @@ export function Skills() {
       skills: [
         { name: "React.js", icon: <SiReact />, color: "#61DAFB" },
         { name: "HTML", icon: <SiHtml5 />, color: "#E34F26" },
-        { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" }
+        { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" },
+        { name: "Next.js", icon: <SiNextdotjs />, color: "#ffffff" }
+      ]
+    },
+    {
+      title: "Backend",
+      skills: [
+         { name: "Node.js", icon: <FaNodeJs />, color: "#339933" }
       ]
     },
     {
       title: "Database",
       skills: [
         { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
-        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" }
+        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
+        { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" }
       ]
     },
     {
