@@ -41,7 +41,7 @@ export function Projects() {
       title: "Personal AI System(ONGOING)",
       description:
         "A personal AI-powered life management system where you can manage tasks, notes, and expenses through a smart natural language assistant.",
-      tags: ["HTML", "CSS","JavaScript","React JS","Python","PostgreSQL"],
+      tags: ["HTML", "CSS","JavaScript","React JS","Chart JS","Python","PostgreSQL"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/Personal-ai-system",
     },
