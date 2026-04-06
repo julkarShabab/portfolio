@@ -3,6 +3,15 @@ import { ExternalLink, Github } from "lucide-react";
 export function Projects() {
 
   const projects = [
+
+    {
+      title: "Life OS-Personal AI System",
+      description:
+        "A personal AI-powered life management system where you can manage tasks, notes, and expenses through a smart natural language assistant.",
+      tags: ["HTML", "CSS","JavaScript","React JS","Chart JS","Python","PostgreSQL"],
+      liveUrl: "",
+      githubUrl: "https://github.com/julkarShabab/Personal-ai-system",
+    },
     
     {
       title: "Gym Management System",
@@ -11,6 +20,15 @@ export function Projects() {
       tags: ["React.js", "Node.js", "MongoDB"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/relife",
+    },
+
+    {
+      title: "Gender Bias Detection in AI Chatbots",
+      description:
+        "Conducted quantitative bias analysis in AI chatbots(Chatgpt,Gemini) using automated bias scorecards.",
+      tags: ["Python", "NLP"],
+      liveUrl: "",
+      githubUrl: "https://github.com/julkarShabab/sentiment_analysis",
     },
     
     {
@@ -28,23 +46,9 @@ export function Projects() {
       tags: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
       liveUrl: "",
       githubUrl: "",
-    },
-    {
-      title: "Gender Bias Detection in AI Chatbots",
-      description:
-        "Conducted quantitative bias analysis in AI chatbots(Chatgpt,Gemini) using automated bias scorecards.",
-      tags: ["Python", "NLP"],
-      liveUrl: "",
-      githubUrl: "https://github.com/julkarShabab/sentiment_analysis",
-    },
-    {
-      title: "Personal AI System(ONGOING)",
-      description:
-        "A personal AI-powered life management system where you can manage tasks, notes, and expenses through a smart natural language assistant.",
-      tags: ["HTML", "CSS","JavaScript","React JS","Chart JS","Python","PostgreSQL"],
-      liveUrl: "",
-      githubUrl: "https://github.com/julkarShabab/Personal-ai-system",
-    },
+    }
+    
+    
   ];
 
   return (

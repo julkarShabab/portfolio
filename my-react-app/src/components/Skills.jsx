@@ -10,16 +10,24 @@ import {
   SiCanva,
   SiGit,
   SiPostman,
-  SiJira
+  SiJira,
+  SiPostgresql,
+  SiChartdotjs,
+  SiFastapi
+
 } from "react-icons/si";
 
-import { FaJava } from "react-icons/fa";
-import { FaCode } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaPhp } from "react-icons/fa";
+import {
+  FaJava,
+  FaCode,
+  FaCss3Alt,
+  FaPhp 
+
+
+} from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { SiPostgresql } from "react-icons/si";
+
+
 
 export function Skills() {
   const skillCategories = [
@@ -31,24 +39,21 @@ export function Skills() {
         { name: "C", icon: <FaCode />, color: "#A8B9CC" },
         { name: "C++", icon: <SiCplusplus />, color: "#00599C" },
         { name: "Java", icon: <FaJava />, color: "#007396" },
-        { name: "PHP", icon: <FaPhp />, color: "#777BB4" }
+        { name: "PHP", icon: <FaPhp />, color: "#777BB4" },
+        { name: "HTML", icon: <SiHtml5 />, color: "#E34F26" },
+        { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" }
       ]
     },
     {
-      title: "Frontend",
+      title: "Framework and Libraries",
       skills: [
         { name: "React.js", icon: <SiReact />, color: "#61DAFB" },
-        { name: "HTML", icon: <SiHtml5 />, color: "#E34F26" },
-        { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" },
-        { name: "Next.js", icon: <SiNextdotjs />, color: "#ffffff" }
+        { name: "FastAPI", icon: <SiFastapi />, color: "#009688" },
+        { name: "Chart.js", icon: <SiChartdotjs />, color: "#FF6384" }
+
       ]
     },
-    {
-      title: "Backend",
-      skills: [
-         { name: "Node.js", icon: <FaNodeJs />, color: "#339933" }
-      ]
-    },
+
     {
       title: "Database",
       skills: [
@@ -75,26 +80,26 @@ export function Skills() {
   ];
 
   return (
-  <section id="skills" className="skills-section">
-    <div className="skills-container">
-      <h2 className="skills-title">Skills</h2>
-      {skillCategories.map((category) => (
-        <div key={category.title} className="skills-row">
-          <div className="skills-row-header">
-            <span className="skills-row-title">{category.title}</span>
-            {/* <span className="skills-row-count">{category.skills.length}</span> */}
+    <section id="skills" className="skills-section">
+      <div className="skills-container">
+        <h2 className="skills-title">Skills</h2>
+        {skillCategories.map((category) => (
+          <div key={category.title} className="skills-row">
+            <div className="skills-row-header">
+              <span className="skills-row-title">{category.title}</span>
+              {/* <span className="skills-row-count">{category.skills.length}</span> */}
+            </div>
+            <div className="skills-items">
+              {category.skills.map((skill) => (
+                <div key={skill.name} className="skill-pill">
+                  <span style={{ color: skill.color, display: "flex" }}>{skill.icon}</span>
+                  {skill.name}
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="skills-items">
-            {category.skills.map((skill) => (
-              <div key={skill.name} className="skill-pill">
-                <span style={{ color: skill.color, display: "flex" }}>{skill.icon}</span>
-                {skill.name}
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+        ))}
+      </div>
+    </section>
+  );
 }
