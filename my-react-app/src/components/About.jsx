@@ -1,5 +1,4 @@
-import { Code2, Palette, Rocket } from "lucide-react";
-//import "./About.css";
+import { Code2, Brain, Server } from "lucide-react";
 
 export function About() {
   return (
@@ -8,40 +7,38 @@ export function About() {
         <h2 className="about-title">About Me</h2>
 
         <div className="about-grid">
-
           <div className="about-card card">
             <div className="icon-box blue">
               <Code2 size={24} />
             </div>
-            <h3>Development</h3>
+            <h3>Frontend</h3>
             <p>
-              Specialized in JavaScript,React.js. I build scalable
-              applications with clean, maintainable code.
+              Building responsive, interactive UIs with React. I care about
+              clean component structure and smooth user experiences.
             </p>
           </div>
 
           <div className="about-card card">
             <div className="icon-box purple">
-              <Palette size={24} />
+              <Server size={24} />
             </div>
-            <h3>Design</h3>
+            <h3>Backend</h3>
             <p>
-              Creating intuitive user interfaces with a focus on accessibility
-              and user experience best practices.
+              Designing REST APIs with FastAPI and Python, backed by PostgreSQL
+              and Supabase for reliable, scalable data management.
             </p>
           </div>
 
           <div className="about-card card">
             <div className="icon-box green">
-              <Rocket size={24} />
+              <Brain size={24} />
             </div>
-            <h3>Innovation</h3>
+            <h3>AI Integration</h3>
             <p>
-              Always exploring new technologies and methodologies to deliver
-              cutting-edge solutions.
+              Integrating LLM APIs to build smart features — from CV matching
+              and cover letter generation to NLP-based bias detection.
             </p>
           </div>
-
         </div>
       </div>
     </section>
