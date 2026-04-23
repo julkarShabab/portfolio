@@ -12,6 +12,15 @@ export function Projects() {
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/Personal-ai-system",
     },
+
+    {
+      title: "AI Job Tracking System",
+      description:
+        "Built an AI-powered job tracking platform that analyzes job descriptions, matches CVs, and auto-generates cover letters using LLM APIs.",
+      tags: ["JavaScript","React JS","Tailwind","Python(FastAPI)","Supabase","Groq LLM API"],
+      liveUrl: "",
+      githubUrl: "https://github.com/julkarShabab/job-tracking-automation",
+    },
     
     {
       title: "Gym Management System",

@@ -13,7 +13,9 @@ import {
   SiJira,
   SiPostgresql,
   SiChartdotjs,
-  SiFastapi
+  SiFastapi,
+  SiTailwindcss,
+  SiClickup
 
 } from "react-icons/si";
 
@@ -21,7 +23,9 @@ import {
   FaJava,
   FaCode,
   FaCss3Alt,
-  FaPhp 
+  FaPhp,
+  FaExchangeAlt, 
+  FaKey 
 
 
 } from "react-icons/fa";
@@ -48,8 +52,18 @@ export function Skills() {
       title: "Framework and Libraries",
       skills: [
         { name: "React.js", icon: <SiReact />, color: "#61DAFB" },
-        { name: "FastAPI", icon: <SiFastapi />, color: "#009688" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06B6D4" },
         { name: "Chart.js", icon: <SiChartdotjs />, color: "#FF6384" }
+
+      ]
+    },
+
+     {
+      title: "Backend & APIs",
+      skills: [
+        { name: "FastAPI", icon: <SiFastapi />, color: "#009688" },
+        { name: "RESTful API Design", icon: <FaExchangeAlt />, color: "#22C55E" },
+        { name: "JWT Authentication", icon: <FaKey />, color: "#F59E0B" }
 
       ]
     },
@@ -74,7 +88,8 @@ export function Skills() {
       skills: [
         { name: "Git", icon: <SiGit />, color: "#F05032" },
         { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
-        { name: "Jira", icon: <SiJira />, color: "#0052CC" }
+        { name: "Jira", icon: <SiJira />, color: "#0052CC" },
+        { name: "ClickUp", icon: <SiClickup />, color: "#7B68EE" }
       ]
     }
   ];
