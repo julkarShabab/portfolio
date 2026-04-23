@@ -209,11 +209,9 @@ button:hover{
   border-radius:50%;
   object-fit:cover;
 
-  /* box-shadow:0 20px 50px rgba(0,0,0,.2); */
   box-shadow:
   0 20px 50px rgba(0,0,0,.2),
   0 0 30px rgba(99,102,241,.35);
-  
 
   animation:floatPhoto 6s ease-in-out infinite;
 }
@@ -229,8 +227,6 @@ button:hover{
     transform:translateY(0px);
   }
 }
-
-/* floating effect */
 
 @keyframes heroFloat{
   0%{transform:translateY(0);}
@@ -359,8 +355,6 @@ button:hover{
 
 /* ABOUT */
 
-/* ABOUT SECTION */
-
 .about-section{
   padding:120px 20px;
 }
@@ -447,6 +441,7 @@ button:hover{
   max-width:260px;
   margin:auto;
 }
+
 /* SKILLS */
 
 .skills-section {
@@ -521,25 +516,6 @@ button:hover{
 .skill-pill svg {
   font-size: 16px;
 }
-/* hover effect */
-
-/* .skill-badge:hover{
-  background:linear-gradient(135deg,#2563eb,#6366f1);
-  color:white;
-
-  transform:translateY(-2px);
-
-  box-shadow:0 6px 16px rgba(99,102,241,.35);
-} */
-
-/* .skills-section{
-  padding:120px 20px;
-} */
-
-/* .skills-title{
-  text-align:center;
-  margin-bottom:60px;
-} */
 
 /* PROJECTS */
 
@@ -590,13 +566,41 @@ button:hover{
 /* reveal */
 
 .project-item:hover .project-details{
-  max-height:300px;
+  max-height:400px;
   opacity:1;
   transform:translateY(0);
   margin-top:14px;
 }
+
 .project-item:hover{
   padding-left:10px;
+}
+
+/* bullet points */
+
+.project-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-bullets li {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.project-bullets li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+  font-weight: 600;
 }
 
 /* tech tags */
@@ -650,9 +654,8 @@ button:hover{
 .project-links a:hover{
   transform:translateX(3px);
 }
-/* RESUME */
 
-/* RESUME SECTION */
+/* RESUME */
 
 .resume-section{
   padding:60px 20px;
@@ -708,8 +711,6 @@ button:hover{
 }
 
 /* CONTACT */
-
-/* CONTACT SECTION */
 
 .contact-section{
   padding:120px 20px;
@@ -799,146 +800,8 @@ button:hover{
   color:white;
   box-shadow:0 0 20px rgba(17,24,39,.5);
 }
-/* MOBILE */
 
-/* body{
-  overflow-x:hidden;
-}
-
-.mobile-menu{
-  position:absolute;
-  top:64px;
-  left:0;
-  width:100%;
-
-  display:flex;
-  flex-direction:column;
-  gap:4px;
-
-  padding:20px;
-
-  background:rgba(255,255,255,0.9);
-  backdrop-filter:blur(20px);
-
-  border-bottom:1px solid var(--border);
-
-  animation:menuSlide .25s ease;
-}
-
-@keyframes menuSlide{
-  from{
-    transform:translateY(-10px);
-    opacity:0;
-  }
-  to{
-    transform:translateY(0);
-    opacity:1;
-  }
-}
-
-.mobile-nav-link{
-  padding:14px 12px;
-  border-radius:12px;
-
-  font-size:16px;
-  font-weight:500;
-
-  background:none;
-  border:none;
-
-  text-align:left;
-
-  color:#334155;
-
-  transition:.2s;
-}
-
-.mobile-nav-link:hover{
-  background:#eef2ff;
-  color:#2563eb;
-}
-.menu-button{
-  display:none;
-}
-
-@media (max-width:768px){
-
-.nav-links{
-  display:none;
-}
-
-.menu-button{
-  display:block;
-}
-
-}
-
-@media (max-width:768px){
-
-  .logo-img{
-    height:34px;
-  }
-
-}
-@media (max-width:768px){
-
-.hero-container{
-  flex-direction:column;
-  text-align:center;
-}
-
-.hero-photo{
-  width:200px;
-  height:200px;
-  margin-bottom:20px;
-}
-
-}
-
-@media (max-width: 768px) {
-
-  .skills-section {
-    padding: 80px 16px;
-  }
-
-  .skills-title {
-    font-size: 22px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .skills-row {
-    margin-bottom: 30px;
-  }
-
-  .skill-pill {
-    font-size: 13px;
-    padding: 7px 12px;
-  }
-
-}
-
-@media (max-width: 480px) {
-
-  .skills-title {
-    font-size: 20px;
-  }
-
-  .skills-items {
-    gap: 8px;
-  }
-
-  .skill-pill {
-    font-size: 12px;
-    padding: 6px 10px;
-    gap: 6px;
-  }
-
-  .skill-pill svg {
-    font-size: 14px;
-  }
-
-} */
+/* ─── MOBILE ──────────────────────────────────────────────────────────────── */
 
 body {
   overflow-x: hidden;
@@ -1078,10 +941,7 @@ body {
 
 }
 
-/* THEME */
-
-/* TOGGLE BUTTON */
-/* THEME TOGGLE */
+/* ─── THEME ───────────────────────────────────────────────────────────────── */
 
 .theme-toggle {
   display: flex;
@@ -1256,6 +1116,14 @@ body {
   color: #6366f1;
 }
 
+[data-theme="dark"] .project-bullets li {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .project-bullets li::before {
+  color: #6366f1;
+}
+
 [data-theme="dark"] .project-tag {
   background: #1e293b;
   color: #6366f1;
@@ -1304,4 +1172,3 @@ body {
 [data-theme="dark"] .social-btn.github:hover {
   background: #334155;
 }
-
