@@ -11,6 +11,13 @@ export function Projects() {
         "Integrated Groq AI to enable natural language querying over user data (e.g., spending trend analysis) ",
         "Designed scalable PostgreSQL schemas to support complex relational data across multiple modules "
       ],
+      architecture: {
+        frontend: "React.js + Chart.js + CSS",
+        backend: "FastAPI",
+        database: "PostgreSQL",
+        auth: "JWT Authentication",
+        ai: "Groq LLM API",
+      },
       tags: ["HTML", "CSS", "JavaScript", "React JS", "Chart JS", "Python", "PostgreSQL"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/Personal-ai-system",
@@ -22,11 +29,19 @@ export function Projects() {
         "Used LLM APIs to extract structured insights (skills, experience, company, salary) from job descriptions ",
         "Added CV parsing (PDF/DOCX) and one-click job saving with structured data storage "
       ],
+
+      architecture: {
+        frontend: "React.js + Tailwind CSS",
+        backend: "FastAPI",
+        database: "Supabase PostgreSQL",
+        auth: "JWT Authentication",
+        ai: "Groq LLM API",
+      },
       tags: ["JavaScript", "React JS", "Tailwind", "Python(FastAPI)", "Supabase", "Groq LLM API"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/job-tracking-automation",
     },
-    
+
     {
       title: "Gender Bias Detection in AI Chatbots",
       bullets: [
@@ -44,6 +59,11 @@ export function Projects() {
         "Implemented full CRUD operations and end-to-end order processing workflows ",
         "Designed scalable MongoDB schemas for managing users, orders, and delivery logistics "
       ],
+      architecture: {
+        frontend: "React.js + CSS",
+        backend: "Node.js",
+        database: "MongoDB",
+      },
       tags: ["React.js", "Node.js", "MongoDB"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/uiu-canteen",
@@ -54,6 +74,12 @@ export function Projects() {
         "Built responsive React components for membership management",
         "Handles user interaction and member data workflows",
       ],
+
+      architecture: {
+        frontend: "React.js + CSS",
+        backend: "Node.js",
+        database: "MongoDB",
+      },
       tags: ["React.js", "Node.js", "MongoDB"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/relife",
@@ -64,6 +90,11 @@ export function Projects() {
         "Developed full-stack appointment and scheduling modules",
         "Optimized dashboards for improved usability",
       ],
+      architecture: {
+        frontend: "HTML + CSS + JavaScript",
+        backend: "PHP",
+        database: "MySQL",
+      },
       tags: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
       liveUrl: "",
       githubUrl: "",
@@ -91,6 +122,46 @@ export function Projects() {
                   <li key={index}>{point}</li>
                 ))}
               </ul>
+
+              {project.architecture && (
+                <div className="architecture-flow">
+                  <div className="flow-row">
+                    <div className="flow-box frontend">
+                      ⚛ {project.architecture.frontend}
+                    </div>
+
+                    <span className="flow-arrow">→</span>
+
+                    <div className="flow-box backend">
+                      ⚙ {project.architecture.backend}
+                    </div>
+
+                    <span className="flow-arrow">→</span>
+
+                    <div className="flow-box database">
+                      🗄 {project.architecture.database}
+                    </div>
+                  </div>
+
+                  {project.architecture.auth && (
+                    <div className="flow-row small">
+                      <span className="flow-arrow down">↓</span>
+                      <div className="flow-box auth">
+                        🔐 {project.architecture.auth}
+                      </div>
+                    </div>
+                  )}
+
+                  {project.architecture.ai && (
+                    <div className="flow-row small">
+                      <span className="flow-arrow down">↓</span>
+                      <div className="flow-box ai">
+                        🤖 {project.architecture.ai}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
 
               <div className="project-tags">
                 {project.tags.map(tag => (
