@@ -147,7 +147,7 @@ export function Projects() {
                     <div className="flow-row small">
                       <span className="flow-arrow down">↓</span>
                       <div className="flow-box auth">
-                        🔐 {project.architecture.auth}
+                         {project.architecture.auth}
                       </div>
                     </div>
                   )}
@@ -156,7 +156,7 @@ export function Projects() {
                     <div className="flow-row small">
                       <span className="flow-arrow down">↓</span>
                       <div className="flow-box ai">
-                        🤖 {project.architecture.ai}
+                         {project.architecture.ai}
                       </div>
                     </div>
                   )}
