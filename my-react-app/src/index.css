@@ -684,10 +684,11 @@ button:hover {
 }
 
 .project-item:hover .project-details {
-  max-height: 800px;
+  max-height: 1200px;  /* ← increase from 800px to 1200px */
   opacity: 1;
   transform: translateY(0);
   margin-top: 16px;
+  overflow: visible;   /* ← add this */
 }
 
 .project-item:hover { padding-left: 16px; }
@@ -1155,4 +1156,34 @@ button:hover {
     font-size: 12.5px;
   }
 
+}
+
+
+.flow-box.realtime {
+  background: linear-gradient(135deg, #06b6d4, #0e7490);
+}
+
+.flow-box.email {
+  background: linear-gradient(135deg, #ef4444, #991b1b);
+}
+
+.flow-box.storage {
+  background: linear-gradient(135deg, #64748b, #334155);
+}
+
+.architecture-image {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.architecture-image img {
+  width: 100%;
+  max-width: 100%;   /* ← remove the 720px limit */
+  height: auto;
+  border-radius: 12px;
+  display: block;
 }

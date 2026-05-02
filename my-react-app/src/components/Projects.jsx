@@ -11,13 +11,14 @@ export function Projects() {
         "Integrated Groq AI to enable natural language querying over user data (e.g., spending trend analysis) ",
         "Designed scalable PostgreSQL schemas to support complex relational data across multiple modules "
       ],
-      architecture: {
-        frontend: "React.js + Chart.js + CSS",
-        backend: "FastAPI",
-        database: "PostgreSQL",
-        auth: "JWT Authentication",
-        ai: "Groq LLM API",
-      },
+      // architecture: {
+      //   frontend: "React.js + Chart.js + CSS",
+      //   backend: "FastAPI",
+      //   database: "PostgreSQL",
+      //   auth: "JWT Authentication",
+      //   ai: "Groq LLM API",
+      // },
+      architectureImage: "/architecture/lifeos_architecture_flow.svg",
       tags: ["HTML", "CSS", "JavaScript", "React JS", "Chart JS", "Python", "PostgreSQL"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/Personal-ai-system",
@@ -30,13 +31,16 @@ export function Projects() {
         "Added CV parsing (PDF/DOCX) and one-click job saving with structured data storage "
       ],
 
-      architecture: {
-        frontend: "React.js + Tailwind CSS",
-        backend: "FastAPI",
-        database: "Supabase PostgreSQL",
-        auth: "JWT Authentication",
-        ai: "Groq LLM API",
-      },
+      // architecture: {
+      //   frontend: "React.js + Tailwind CSS",
+      //   backend: "FastAPI",
+      //   database: "Supabase PostgreSQL",
+      //   auth: "JWT Authentication",
+      //   ai: "Groq LLM API",
+      // },
+
+      architectureImage: "/architecture/jobtracker_architecture_flow.svg",
+
       tags: ["JavaScript", "React JS", "Tailwind", "Python(FastAPI)", "Supabase", "Groq LLM API"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/job-tracking-automation",
@@ -50,15 +54,16 @@ export function Projects() {
         "Added optimistic UI updates for instant goal creation, Kanban drag-and-drop, role changes, and member management",
         "Integrated real-time collaboration, JWT authentication, email invitations, file uploads, and Swagger API documentation"
       ],
-      architecture: {
-        frontend: "Next.js + Tailwind CSS + Zustand",
-        backend: "Node.js + Express.js",
-        database: "PostgreSQL + Prisma",
-        auth: "JWT Authentication",
-        realtime: "Socket.io",
-        email: "Resend",
-        storage: "Cloudinary",
-      },
+      // architecture: {
+      //   frontend: "Next.js + Tailwind CSS + Zustand",
+      //   backend: "Node.js + Express.js",
+      //   database: "PostgreSQL + Prisma",
+      //   auth: "JWT Authentication",
+      //   realtime: "Socket.io",
+      //   email: "Resend",
+      //   storage: "Cloudinary",
+      // },
+      architectureImage: "/architecture/team_hub_architecture_flow.svg",
       tags: [
         "JavaScript",
         "Next.js",
@@ -161,8 +166,16 @@ export function Projects() {
                 ))}
               </ul>
 
-              {project.architecture && (
+              {project.architectureImage ? (
+                <div className="architecture-image">
+                  <img
+                    src={project.architectureImage}
+                    alt="System Architecture"
+                  />
+                </div>
+              ) : project.architecture ? (
                 <div className="architecture-flow">
+
                   <div className="flow-row">
                     <div className="flow-box frontend">
                       ⚛ {project.architecture.frontend}
@@ -181,25 +194,27 @@ export function Projects() {
                     </div>
                   </div>
 
-                  {project.architecture.auth && (
-                    <div className="flow-row small">
-                      <span className="flow-arrow down">↓</span>
-                      <div className="flow-box auth">
-                        {project.architecture.auth}
-                      </div>
-                    </div>
+                  {/* Extra Layers */}
+                  {[
+                    { key: "auth", icon: "🔐", className: "auth" },
+                    { key: "ai", icon: "🤖", className: "ai" },
+                    { key: "realtime", icon: "🔄", className: "realtime" },
+                    { key: "email", icon: "✉️", className: "email" },
+                    { key: "storage", icon: "☁️", className: "storage" },
+                  ].map(
+                    ({ key, icon, className }) =>
+                      project.architecture[key] && (
+                        <div className="flow-row small" key={key}>
+                          <span className="flow-arrow down">↓</span>
+                          <div className={`flow-box ${className}`}>
+                            {icon} {project.architecture[key]}
+                          </div>
+                        </div>
+                      )
                   )}
 
-                  {project.architecture.ai && (
-                    <div className="flow-row small">
-                      <span className="flow-arrow down">↓</span>
-                      <div className="flow-box ai">
-                        {project.architecture.ai}
-                      </div>
-                    </div>
-                  )}
                 </div>
-              )}
+              ) : null}
 
               <div className="project-tags">
                 {project.tags.map(tag => (
