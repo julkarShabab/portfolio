@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, FileText } from "lucide-react";
 
 export function Projects() {
 
@@ -40,6 +40,44 @@ export function Projects() {
       tags: ["JavaScript", "React JS", "Tailwind", "Python(FastAPI)", "Supabase", "Groq LLM API"],
       liveUrl: "",
       githubUrl: "https://github.com/julkarShabab/job-tracking-automation",
+    },
+
+    {
+      title: "Team Hub — Collaborative Workspace Platform",
+      bullets: [
+        "Built a full-stack collaborative workspace platform for managing goals, action items, announcements, members, and analytics",
+        "Implemented advanced role-based access control with Admin/Member permissions across frontend and backend routes",
+        "Added optimistic UI updates for instant goal creation, Kanban drag-and-drop, role changes, and member management",
+        "Integrated real-time collaboration, JWT authentication, email invitations, file uploads, and Swagger API documentation"
+      ],
+      architecture: {
+        frontend: "Next.js + Tailwind CSS + Zustand",
+        backend: "Node.js + Express.js",
+        database: "PostgreSQL + Prisma",
+        auth: "JWT Authentication",
+        realtime: "Socket.io",
+        email: "Resend",
+        storage: "Cloudinary",
+      },
+      tags: [
+        "JavaScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Zustand",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Prisma",
+        "Socket.io",
+        "JWT",
+        "Resend",
+        "Cloudinary",
+        "Swagger",
+        "Turborepo"
+      ],
+      liveUrl: "https://team-hub-frontend.up.railway.app",
+      apiDocsUrl: "https://team-hub-production-6ffe.up.railway.app/api/docs",
+      githubUrl: "https://github.com/julkarShabab/team-hub",
     },
 
     {
@@ -147,7 +185,7 @@ export function Projects() {
                     <div className="flow-row small">
                       <span className="flow-arrow down">↓</span>
                       <div className="flow-box auth">
-                         {project.architecture.auth}
+                        {project.architecture.auth}
                       </div>
                     </div>
                   )}
@@ -156,7 +194,7 @@ export function Projects() {
                     <div className="flow-row small">
                       <span className="flow-arrow down">↓</span>
                       <div className="flow-box ai">
-                         {project.architecture.ai}
+                        {project.architecture.ai}
                       </div>
                     </div>
                   )}
@@ -182,6 +220,17 @@ export function Projects() {
                   <a href={project.githubUrl} className="project-link gray" target="_blank" rel="noopener noreferrer">
                     <Github size={16} />
                     Code
+                  </a>
+                )}
+                {project.apiDocsUrl && (
+                  <a
+                    href={project.apiDocsUrl}
+                    className="project-link purple"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FileText size={16} />
+                    API Docs
                   </a>
                 )}
               </div>
