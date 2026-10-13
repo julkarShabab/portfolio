@@ -16,11 +16,11 @@ export function Hero() {
         Hi, I'm <span className="hero-name">Julkar Niene</span>
       </h1>
 
-      <h2 className="hero-role">Recent CSE Graduate | Full-Stack Developer</h2>
+      <h2 className="hero-role">System Engineer | Linux & Infrastructure</h2>
 
       <p className="hero-description">
        {/* <b>Recent CSE Graduate | Full-Stack Developer </b> <br /> */}
-I build scalable web applications with React.js, Node.js, and Python — from RESTful APIs and JWT authentication to AI-powered features using LLM integrations. Passionate about writing clean, maintainable code and solving real problems through technology.
+CSE graduate and System Engineer Intern experienced in Linux server administration, Nginx web hosting, PHP-FPM, MariaDB backup automation, and Bash scripting. I build, deploy, troubleshoot, and maintain applications and infrastructure.
       </p>
 
       <button onClick={scrollToProjects} className="hero-button">

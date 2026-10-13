@@ -3,6 +3,52 @@ import { ExternalLink, Github, FileText } from "lucide-react";
 export function Projects() {
 
   const projects = [
+
+
+    {
+    title: "Linux Server Health Monitor",
+    description:
+      "A Bash-based monitoring tool for Ubuntu servers.",
+    bullets: [
+      "Monitors CPU, RAM, disk, uptime, SSH, and Nginx status.",
+      "Uses systemd timers to run scheduled health checks.",
+      "Sends alerts on status changes and recovery.",
+      "Publishes a server status page through Nginx on port 8080.",
+    ],
+    architectureImage: "/architecture/linux server.svg",
+    tags: [
+      "Bash",
+      "Linux",
+      "Ubuntu Server",
+      "systemd",
+      "Nginx",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/julkarShabab/linux-health-monitor",
+    apiDocsUrl: "",
+  },
+  {
+    title: "MariaDB Manager",
+    description:
+      "A Bash utility for database backup and recovery.",
+    bullets: [
+      "Backs up and restores MariaDB databases using mariadb-dump.",
+      "Compresses backups and verifies integrity with gzip.",
+      "Automates scheduled runs and seven-day retention cleanup.",
+      "Uses protected credentials, logging, and safeguards against dropping system databases.",
+    ],
+    architectureImage: "/architecture/mariadb-architecture.svg",
+    tags: [
+      "Bash",
+      "MariaDB",
+      "SQL",
+      "gzip",
+      "systemd timers",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/julkarShabab/mariadb-manager",
+    apiDocsUrl: "",
+  },
     {
       title: "Life OS-Personal AI System",
       bullets: [
@@ -85,63 +131,63 @@ export function Projects() {
       githubUrl: "https://github.com/julkarShabab/team-hub",
     },
 
-    {
-      title: "Gender Bias Detection in AI Chatbots",
-      bullets: [
-        "Conducted quantitative analysis of gender bias in AI chatbot(ChatGPT, Gemini) responses using structured experimental design ",
-        "Developed automated evaluation pipelines to measure bias across multiple response dimensions ",
-      ],
-      tags: ["Python", "NLP"],
-      liveUrl: "",
-      githubUrl: "https://github.com/julkarShabab/sentiment_analysis",
-    },
-    {
-      title: "Cafe Delivery Management System",
-      bullets: [
-        "Built a complete full-stack delivery platform with user-facing UI, admin panel, and database integration ",
-        "Implemented full CRUD operations and end-to-end order processing workflows ",
-        "Designed scalable MongoDB schemas for managing users, orders, and delivery logistics "
-      ],
-      architecture: {
-        frontend: "React.js + CSS",
-        backend: "Node.js",
-        database: "MongoDB",
-      },
-      tags: ["React.js", "Node.js", "MongoDB"],
-      liveUrl: "",
-      githubUrl: "https://github.com/julkarShabab/uiu-canteen",
-    },
-    {
-      title: "Gym Management System",
-      bullets: [
-        "Built responsive React components for membership management",
-        "Handles user interaction and member data workflows",
-      ],
+    // {
+    //   title: "Gender Bias Detection in AI Chatbots",
+    //   bullets: [
+    //     "Conducted quantitative analysis of gender bias in AI chatbot(ChatGPT, Gemini) responses using structured experimental design ",
+    //     "Developed automated evaluation pipelines to measure bias across multiple response dimensions ",
+    //   ],
+    //   tags: ["Python", "NLP"],
+    //   liveUrl: "",
+    //   githubUrl: "https://github.com/julkarShabab/sentiment_analysis",
+    // },
+    // {
+    //   title: "Cafe Delivery Management System",
+    //   bullets: [
+    //     "Built a complete full-stack delivery platform with user-facing UI, admin panel, and database integration ",
+    //     "Implemented full CRUD operations and end-to-end order processing workflows ",
+    //     "Designed scalable MongoDB schemas for managing users, orders, and delivery logistics "
+    //   ],
+    //   architecture: {
+    //     frontend: "React.js + CSS",
+    //     backend: "Node.js",
+    //     database: "MongoDB",
+    //   },
+    //   tags: ["React.js", "Node.js", "MongoDB"],
+    //   liveUrl: "",
+    //   githubUrl: "https://github.com/julkarShabab/uiu-canteen",
+    // },
+    // {
+    //   title: "Gym Management System",
+    //   bullets: [
+    //     "Built responsive React components for membership management",
+    //     "Handles user interaction and member data workflows",
+    //   ],
 
-      architecture: {
-        frontend: "React.js + CSS",
-        backend: "Node.js",
-        database: "MongoDB",
-      },
-      tags: ["React.js", "Node.js", "MongoDB"],
-      liveUrl: "",
-      githubUrl: "https://github.com/julkarShabab/relife",
-    },
-    {
-      title: "Hospital Management System",
-      bullets: [
-        "Developed full-stack appointment and scheduling modules",
-        "Optimized dashboards for improved usability",
-      ],
-      architecture: {
-        frontend: "HTML + CSS + JavaScript",
-        backend: "PHP",
-        database: "MySQL",
-      },
-      tags: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
-      liveUrl: "",
-      githubUrl: "",
-    },
+    //   architecture: {
+    //     frontend: "React.js + CSS",
+    //     backend: "Node.js",
+    //     database: "MongoDB",
+    //   },
+    //   tags: ["React.js", "Node.js", "MongoDB"],
+    //   liveUrl: "",
+    //   githubUrl: "https://github.com/julkarShabab/relife",
+    // },
+    // {
+    //   title: "Hospital Management System",
+    //   bullets: [
+    //     "Developed full-stack appointment and scheduling modules",
+    //     "Optimized dashboards for improved usability",
+    //   ],
+    //   architecture: {
+    //     frontend: "HTML + CSS + JavaScript",
+    //     backend: "PHP",
+    //     database: "MySQL",
+    //   },
+    //   tags: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
+    //   liveUrl: "",
+    //   githubUrl: "",
+    // },
   ];
 
   return (

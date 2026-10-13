@@ -1,4 +1,5 @@
-import { Code2, Brain, Server } from "lucide-react";
+
+import { Server, Activity, Code2 } from "lucide-react";
 
 export function About() {
   return (
@@ -9,34 +10,41 @@ export function About() {
         <div className="about-grid">
           <div className="about-card card">
             <div className="icon-box blue">
-              <Code2 size={24} />
-            </div>
-            <h3>Frontend</h3>
-            <p>
-              Building responsive, interactive UIs with React. I care about
-              clean component structure and smooth user experiences.
-            </p>
-          </div>
-
-          <div className="about-card card">
-            <div className="icon-box purple">
               <Server size={24} />
             </div>
-            <h3>Backend</h3>
+
+            <h3>Systems & Infrastructure</h3>
             <p>
-              Designing REST APIs with FastAPI and Python, backed by PostgreSQL
-              and Supabase for reliable, scalable data management.
+              Working with Ubuntu Server, Linux administration,
+              Nginx, PHP-FPM, users and permissions, and systemd
+              services to deploy and maintain web applications.
             </p>
           </div>
 
           <div className="about-card card">
             <div className="icon-box green">
-              <Brain size={24} />
+              <Activity size={24} />
             </div>
-            <h3>AI Integration</h3>
+
+            <h3>Automation & Monitoring</h3>
             <p>
-              Integrating LLM APIs to build smart features — from CV matching
-              and cover letter generation to NLP-based bias detection.
+              Building Bash scripts for server health monitoring
+              and MariaDB backups. Using systemd timers, logging,
+              and recovery alerts to automate routine tasks.
+            </p>
+          </div>
+
+          <div className="about-card card">
+            <div className="icon-box purple">
+              <Code2 size={24} />
+            </div>
+
+            <h3>Application Deployment</h3>
+            <p>
+              Combining my full-stack development background with
+              infrastructure knowledge to deploy applications,
+              configure reverse proxies, troubleshoot build issues,
+              and understand problems across the application stack.
             </p>
           </div>
         </div>
